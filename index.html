@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10243b">
+  <title>لكريم، بيوم ميلاده</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+	<div class="creator-gate" id="creatorGate">
+	  <form class="creator-card" id="creatorForm">
+	    <p class="eyebrow">قبل ما تفوت 👀</p>
+	    <label for="creatorName">
+	   حط اسم الشخص يلي بتتوقع انو صمم هالموقع
+	    </label>
+	    <input
+	      id="creatorName"
+	      type="text"
+	      placeholder="اكتب..."
+	      autocomplete="off"
+	      required
+	    >
+	    <button type="submit">ادخل</button>
+	    <p id="creatorError" class="creator-error hidden">
+	الأسم غلط يا حمار
+	    </p>
+	  </form>
+	</div>
+
+  <div class="intro" id="startScreen" role="button" tabindex="0" aria-label="اضغط للدخول">
+    <div class="intro-card">
+      <p class="eyebrow">23 تشرين الأول</p>
+      <h1>كل سنة وإنت بألف بخير يا كريمو </h1>
+
+      <button id="enterButton" type="button">اضغط للدخول</button>
+
+    </div>
+  </div>
+
+  <header class="topbar hidden" id="topbar">
+    <span>رسالة لكريم</span>
+    <button id="muteToggle" class="quiet-button" type="button" aria-pressed="false">إيقاف الموسيقى</button>
+  </header>
+
+  <main class="page hidden" id="mainContent">
+    <section class="hero">
+      <p class="eyebrow">إلى كريم جبيلي</p>
+      <h1>عيد ميلاد سعيد يا غالي</h1>
+      <p class="lead">مش بس سنة جديدة من عمرك، كمان فرصة جديدة تقرّب فيها من كل  شي بتحلم فيه يا روحي.</p>
+    </section>
+
+    <section class="letter panel">
+      <p class="section-label">رسالة من القلب</p>
+      <h2>كل سنة وإنت بألف خير يا كريم</h2>
+      <div class="letter-body">
+        <p>إنشالله تكون هالسنة بداية لكل شي حلو بحياتك، وتقدر تحقق كل شي عم تطمحله وعم تتعب كرماله. بتمنالك من كل قلبي تشوف حالك بالمكان اللي دايماً حلمت تكون فيه، وتوصل لكل أهدافك مهما كانت صعبة أو بعيدة.</p>
+        <p>بدي قلك شغلة، ما تخلي ولا شي يوقف بطريقك، ولا تسمح لأي حدا يقلل من طموحك أو يخليك تشك بحالك. كل تعب إلو نتيجة، وكل خطوة صغيرة عم تعملها اليوم ممكن تكون السبب بنجاح كبير بكرا. ضل آمن بحالك وبقدراتك، لأنو الإنسان اللي عنده هدف وبيضل يسعى وراه، بالنهاية رح يوصل لمحل بيفتخر فيه بحاله.</p>
+        <p>إنشالله بشوفك دايماً ناجح ومبسوط وعم تحقق أحلامك وحدة ورا التانية، وتكون هالسنة مليانة فرص حلوة وإنجازات وأيام بتفرح قلبك. والأهم تضل متل ما إنت، وتضل رافع راسك ومكمّل بطريقك مهما صار.</p>
+        <p>عيد ميلاد سعيد يا غالي، وإنشالله الأيام الجايي تحملك أضعاف كل شي حلو بتتمناه، وتكون هالسنة من أحلى سنين عمرك.</p>
+      </div>
+      <p class="signature">من عبد الرحمن ❤️</p>
+    </section>
+
+    <section class="gallery-section">
+      <p class="section-label">كم ذكرى حلوة</p>
+      <h2>للأيام الحلوة واللي جايي أحلى</h2>
+      <div class="gallery">
+        <figure><img src="images/photo1.jpg" alt="ذكرى الأولى"><figcaption>شو قوي🫠</figcaption></figure>
+        <figure><img src="images/photo2.jpg" alt="ذكرى الثانية"><figcaption>لو غول مهيك 😮</figcaption></figure>
+        <figure><img src="images/photo3.jpg" alt="ذكرى الثالثة"><figcaption> دريس صمالله🥸</figcaption></figure>
+        <figure><img src="images/photo4.jpg" alt="ذكرى الرابعة"><figcaption>سكسييي 🤗</figcaption></figure>
+        <figure><img src="images/photo5.jpg" alt="ذكرى الخامسة"><figcaption>لا تنتسى</figcaption></figure>
+      </div>
+
+    </section>
+
+    <section class="music panel">
+      <div>
+        <p class="section-label">على ذوقك يا رفيقي😉</p>
+
+      </div>
+      <div class="playlist" id="playlist">
+        <button class="song active" type="button" data-src="music.mp3">happy birth day</button>
+        <button class="song" type="button" data-src="music2.mp3">اغنية البراعمم </button>
+        <button class="song" type="button" data-src="music3.mp3">الأغنية الصاعقة للقلوب</button>
+      </div>
+      <div class="audio-controls">
+        <button id="playPauseBtn" type="button" aria-label="تشغيل أو إيقاف">إيقاف مؤقت</button>
+        <label for="volumeControl">الصوت</label>
+        <input id="volumeControl" type="range" min="0" max="100" value="55">
+      </div>
+
+    </section>
+
+    <section class="capsule panel" id="timeCapsule">
+      <p class="section-label">موعد بالمستقبل</p>
+      <h2>كبسولة الزمن</h2>
+      <p id="capsuleStatus" class="capsule-status">هالرسالة بعدها ناطرة موعدها.</p>
+      <p class="unlock-date">موعد فتح الرسالة: <strong>23 10 2027</strong></p>
+      <div id="countdown" class="countdown" aria-live="polite"></div>
+      <article id="futureMessage" class="future-message hidden">
+        <h3>رسالة إلك من عبد الرحمن</h3>
+
+        <p class="signature">صديقك، عبد الرحمن</p>
+        <div class="capsule-audio">
+
+          <audio controls preload="metadata">
+            <source src="capsule-message.mp3" type="audio/mpeg">
+            المتصفح ما بيدعم تشغيل الصوت.
+          </audio>
+
+        </div>
+      </article>
+    </section>
+    <footer>عملتها إلك بمحبة، وإنشالله تكون سنة حلوة عليك يا كريم.</footer>
+  </main>
+
+  <audio id="music" src="music.mp3" preload="none" loop></audio>
+  <script src="script.js"></script>
+</body>
+</html>
